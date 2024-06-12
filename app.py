@@ -44,8 +44,5 @@ def send_text():
 
     return jsonify(text_info)
 
-if __name__ == '__main__':
-    app.run(debug=False)
-
 
 
