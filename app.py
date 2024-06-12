@@ -21,7 +21,7 @@ def get_video_names():
 @app.route('/sendvideo')
 def send_video():
     video_name = request.args.get('video_name')
-    video_file_path = os.path.join('videos', f"{video_name}.mp4")
+    video_file_path = os.path.join('videos', video_name , f"{video_name}.mp4")
 
     if os.path.exists(video_file_path):
         return send_file(video_file_path, mimetype='video/mp4')
